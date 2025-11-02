@@ -95,8 +95,6 @@ class Hotel:
                 precios_info.append(info.strip())
         return precios_info
 
-    def obtener_descuentos_clientes_habituales(self) -> List[float]:
-        return [r.cliente.descuento for r in self.reservas if isinstance(r.cliente, ClienteHabitual)]
 
     def reservar_habitacion_por_numero(self, numero: int, cliente: Cliente, fecha_entrada: date, numero_dias: int) -> Optional[Reserva]:
         for h in self.habitaciones:
